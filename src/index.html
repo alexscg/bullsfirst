@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bullsfirst</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <!-- Libs -->
+    <script src="assets/js/angular.js"></script>
+
+    <!-- Application -->
+    <script src="app.js"></script>
+    <script src="AccountsController.js"></script>
+</head>
+<body ng-app="bullsfirst">
+
+<!-- Header -->
+<div id="header">
+    <div id="nav">
+        <div class="logo">
+            <h1>bullsfirst</h1>
+
+            <div class="subtitle">Calling All Bull Markets</div>
+        </div>
+
+        <div class="actions">
+            <button>
+                <i class="fa fa-star-o"></i>
+                <span>Trade<span>
+            </button>
+            <button>
+                <i class="fa fa-sign-in"></i>
+                <span>Transfer</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Content -->
+<div id="content" ng-controller="AccountsController">
+    <div class="left-section">
+        <div class="header">
+            <strong>Accounts</strong>
+
+            <div class="actions">
+                <button ng-click="addAccount()">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    <span>Add Account</span>
+                </button>
+                <button>
+                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                    <span>Refresh</span>
+                </button>
+            </div>
+        </div>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Market Value</th>
+                <th>Cash</th>
+                <th>Legend</th>
+            </tr>
+
+            <tr ng-repeat="row in rows">
+                <td>{{ row.name }}</td>
+                <td>{{ row.marketValue | currency }}</td>
+                <td>{{ row.cash | currency }}</td>
+                <td>
+                    <div class="legend" style="background-color: {{ row.legend }}"></div>
+                </td>
+            </tr>
+
+            <tr class="totals">
+                <td></td>
+                <td>
+                    <strong>{{ totals.marketValue | currency }}</strong>
+                </td>
+                <td>
+                    <strong>{{ totals.cash | currency }}</strong>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="right-section">
+        <img class="chart" src="assets/images/chart.png" alt="Chart">
+
+        <div class="help-label">Click on an account to view positions</div>
+    </div>
+
+</div>
+
+</body>
+</html>

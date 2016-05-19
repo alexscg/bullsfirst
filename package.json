@@ -1,0 +1,27 @@
+{
+  "name": "bullsfirst",
+  "version": "1.0.0",
+  "description": "Sapient global markets code challenge",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://alexscg@github.com/alexscg/bullsfirst.git"
+  },
+  "keywords": [
+    "sapient",
+    "code",
+    "challenge"
+  ],
+  "author": "Alex Shapiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexscg/bullsfirst/issues"
+  },
+  "homepage": "https://github.com/alexscg/bullsfirst#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
+}

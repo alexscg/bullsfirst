@@ -1,0 +1,143 @@
+body {
+    font-size: 14px;
+    font-family: "Helvetica Neue", "Arial", "sans-serif";
+    background: #fff;
+    margin: 0 auto;
+}
+
+button {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    border: none;
+}
+
+table {
+    width: 100%;
+}
+table td {
+    padding: 5px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+}
+
+/* Header */
+#header {
+    display: flex;
+    background: #f79e20;
+    padding: 30px 20px;
+}
+
+#nav {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#header .logo {
+    float: left;
+    background: url('../images/logo.jpg');
+    width: 154px;
+    height: 77px;
+}
+
+#header .logo h1,
+#header .logo div {
+    display:none;
+}
+
+#header .logo .subtitle {
+    font-size: 0.8rem;
+}
+
+#header .actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+}
+#header .actions button {
+    background: #ed4224;
+    padding: 15px 20px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    max-width: 110px;
+    height: 75px;
+}
+#header .actions button .fa {
+    font-size: 30px;
+    width: 100%;
+}
+
+
+
+#content {
+    display: flex;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+/* Left Section */
+
+.left-section {
+    flex: 1;
+    margin-right: 20px;
+}
+.left-section .header {
+    display: flex;
+    height: 30px;
+}
+
+.left-section .header button {
+    height: 25px;
+    background: #f27522;
+    padding: 5px 15px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.left-section .header > .actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+table th {
+    background: #ccc;
+    padding: 5px;
+}
+.totals td {
+    border-top: 3px solid #ccc;
+}
+
+.legend {
+    width: 30px;
+    height: 16px;
+}
+
+/* Right Section */
+.right-section {
+    width: 300px;
+    background: #ccc;
+}
+.right-section .chart {
+
+}
+
+.right-section .help-label {
+    padding: 10px;
+}
+
+
+
+
+
+.container:after,
+.row:after,
+.vidElem:after {
+  content: "";
+  display: table;
+  clear: both;
+}
